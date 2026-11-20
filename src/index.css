@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* Subtle compositor-only ambient aura drift */
+@keyframes vibe-float-a {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(24px, -18px, 0) scale(1.06);
+  }
+}
+
+@keyframes vibe-float-b {
+  0%, 100% {
+    transform: translate3d(0px, 0px, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-20px, 22px, 0) scale(1.05);
+  }
+}
+
+.animate-vibe-a {
+  animation: vibe-float-a 16s ease-in-out infinite;
+}
+
+.animate-vibe-b {
+  animation: vibe-float-b 20s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-vibe-a,
+  .animate-vibe-b {
+    animation: none !important;
+  }
+}
+
+/* Dark mode optical weight compensation */
+.dark body {
+  letter-spacing: 0.005em;
+}

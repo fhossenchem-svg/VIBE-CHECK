@@ -1,0 +1,521 @@
+{
+  "users": [
+    {
+      "id": "user_luna_demo",
+      "username": "luna_vibes",
+      "displayName": "Luna",
+      "bio": "Curating 2AM playlists, iced oat lattes, and mild delusions.",
+      "avatarPreset": "aurora",
+      "favoriteAesthetic": "Dreamcore Lavender",
+      "profileTheme": "lavender-haze",
+      "isModerator": true,
+      "createdAt": "2026-10-06T14:17:00.000Z",
+      "passwordHash": "f589e974d950c2537333950246b4ae08:70ad532f0a15201108c56fa5836a6bca16f2c2a700ebf5ed50a83b4be594b8e3d668b7769c2fd3d84935f8f23bbc23a9e38a9589a52bb9c28080d08bc1bd01c0",
+      "savedConfessionIds": [
+        "conf_1",
+        "conf_3"
+      ]
+    },
+    {
+      "id": "user_kai_demo",
+      "username": "kai_orbit",
+      "displayName": "Kai",
+      "bio": "Film grain enthusiast & certified overthinker.",
+      "avatarPreset": "sky",
+      "favoriteAesthetic": "Indie Main Character",
+      "profileTheme": "midnight-sky",
+      "isModerator": false,
+      "createdAt": "2026-10-21T14:25:00.000Z",
+      "passwordHash": "6eb9fd35998a498436b9f804bafe379e:01f78a773c27b94ccbe2fd46ef262dc44e58f9085eea54e43735f57ab05b8fdd7e6e434401bdde50c984008ad541587cfeb5a5c510b7ec2e3d59e1c0a12730f5",
+      "savedConfessionIds": [
+        "conf_2"
+      ]
+    }
+  ],
+  "moodCheckins": [
+    {
+      "id": "mc_cc1316b2-0",
+      "userId": null,
+      "username": "anonymous",
+      "mood": "Main Character Energy",
+      "note": "",
+      "isPublic": true,
+      "createdAt": "2026-11-20T17:41:21.334Z"
+    },
+    {
+      "id": "mc_58621a1b-b",
+      "userId": null,
+      "username": "anonymous",
+      "mood": "Main Character Energy",
+      "note": "",
+      "isPublic": true,
+      "createdAt": "2026-11-20T17:41:19.682Z"
+    },
+    {
+      "id": "mc_1",
+      "userId": "user_luna_demo",
+      "username": "luna_vibes",
+      "mood": "Main Character Energy",
+      "note": "Crosswalk beat drop hit right when my iced matcha arrived.",
+      "isPublic": true,
+      "createdAt": "2026-11-20T10:43:00.000Z"
+    },
+    {
+      "id": "mc_2",
+      "userId": "user_luna_demo",
+      "username": "luna_vibes",
+      "mood": "Delusional",
+      "note": "Convinced myself I can finish three creative projects before Friday.",
+      "isPublic": true,
+      "createdAt": "2026-11-19T16:06:00.000Z"
+    },
+    {
+      "id": "mc_3",
+      "userId": "user_luna_demo",
+      "username": "luna_vibes",
+      "mood": "Romantic",
+      "note": "Pink sky over the train tracks made me miss someone I have not met yet.",
+      "isPublic": true,
+      "createdAt": "2026-11-18T18:08:00.000Z"
+    },
+    {
+      "id": "mc_4",
+      "userId": "user_luna_demo",
+      "username": "luna_vibes",
+      "mood": "Main Character Energy",
+      "note": "Wearing oversized headphones in the rain.",
+      "isPublic": true,
+      "createdAt": "2026-11-17T13:18:00.000Z"
+    },
+    {
+      "id": "mc_5",
+      "userId": "user_luna_demo",
+      "username": "luna_vibes",
+      "mood": "Productive",
+      "note": "Inbox at zero for the first time since September.",
+      "isPublic": true,
+      "createdAt": "2026-11-15T11:22:00.000Z"
+    },
+    {
+      "id": "mc_6",
+      "userId": "user_luna_demo",
+      "username": "luna_vibes",
+      "mood": "Overthinking",
+      "note": "Did they mean \"sounds good\" or \"sounds good.\"?",
+      "isPublic": true,
+      "createdAt": "2026-11-13T22:16:00.000Z"
+    },
+    {
+      "id": "mc_7",
+      "userId": "user_luna_demo",
+      "username": "luna_vibes",
+      "mood": "Happy",
+      "note": "Unexpected voice note from an old friend.",
+      "isPublic": true,
+      "createdAt": "2026-11-11T15:02:00.000Z"
+    },
+    {
+      "id": "mc_8",
+      "userId": "user_luna_demo",
+      "username": "luna_vibes",
+      "mood": "Mentally on Vacation",
+      "note": "Looking at coastal Italy flights during lecture.",
+      "isPublic": true,
+      "createdAt": "2026-11-09T12:41:00.000Z"
+    },
+    {
+      "id": "mc_9",
+      "userId": "user_luna_demo",
+      "username": "luna_vibes",
+      "mood": "Main Character Energy",
+      "note": "Friday evening gallery walk solo.",
+      "isPublic": true,
+      "createdAt": "2026-11-06T19:47:00.000Z"
+    },
+    {
+      "id": "mc_10",
+      "userId": "user_kai_demo",
+      "username": "kai_orbit",
+      "mood": "Chaotic",
+      "note": "Booked concert tickets for a Tuesday in another city.",
+      "isPublic": true,
+      "createdAt": "2026-11-20T11:36:00.000Z"
+    },
+    {
+      "id": "mc_11",
+      "userId": null,
+      "username": "anonymous",
+      "mood": "Unbothered",
+      "note": "Deleted three group chats and my skin cleared up.",
+      "isPublic": true,
+      "createdAt": "2026-11-20T09:39:00.000Z"
+    },
+    {
+      "id": "mc_12",
+      "userId": null,
+      "username": "anonymous",
+      "mood": "Delusional",
+      "note": "Starting a whole new hobby at 1:30 AM.",
+      "isPublic": true,
+      "createdAt": "2026-11-19T20:05:00.000Z"
+    },
+    {
+      "id": "mc_13",
+      "userId": null,
+      "username": "anonymous",
+      "mood": "Lonely",
+      "note": "Quiet dorm room energy tonight, listening to vinyl.",
+      "isPublic": true,
+      "createdAt": "2026-11-19T23:13:00.000Z"
+    }
+  ],
+  "confessions": [
+    {
+      "id": "conf_6edebd8d-3",
+      "category": "Life",
+      "moodTag": "Chaotic",
+      "text": "Verification check for camera photo upload attachment",
+      "media": {
+        "url": "/uploads/1fe26715-5f1d-41a2-9c4a-e97aa4013866.jpg",
+        "mediaType": "image"
+      },
+      "likes": 1,
+      "likedBy": [
+        "guest_anon"
+      ],
+      "reactions": {
+        "💜": 0,
+        "😭": 0,
+        "🔥": 0,
+        "💀": 0,
+        "🫶": 0
+      },
+      "reactionsByUser": {
+        "💜": [],
+        "😭": [],
+        "🔥": [],
+        "💀": [],
+        "🫶": []
+      },
+      "comments": [],
+      "reportCount": 0,
+      "reports": [],
+      "status": "removed",
+      "createdAt": "2026-11-20T17:43:56.066Z"
+    },
+    {
+      "id": "conf_1",
+      "category": "Love",
+      "moodTag": "Delusional",
+      "text": "I still check whether they listened to the playlist I made six months ago because I secretly slip one new song in every Sunday.",
+      "likes": 142,
+      "likedBy": [
+        "user_kai_demo"
+      ],
+      "reactions": {
+        "💜": 48,
+        "😭": 61,
+        "🔥": 8,
+        "💀": 12,
+        "🫶": 29
+      },
+      "reactionsByUser": {
+        "💜": [],
+        "😭": [
+          "user_luna_demo"
+        ],
+        "🔥": [],
+        "💀": [],
+        "🫶": []
+      },
+      "comments": [
+        {
+          "id": "cm_1",
+          "authorLabel": "Anon #402",
+          "userId": null,
+          "text": "This is peak modern romance honestly.",
+          "createdAt": "2026-11-20T12:05:00.000Z"
+        },
+        {
+          "id": "cm_2",
+          "authorLabel": "Anon #119",
+          "userId": null,
+          "text": "Wait do playlists show recently added dates? Asking for a friend.",
+          "createdAt": "2026-11-20T13:21:00.000Z"
+        }
+      ],
+      "reportCount": 0,
+      "reports": [],
+      "status": "active",
+      "createdAt": "2026-11-20T08:25:00.000Z"
+    },
+    {
+      "id": "conf_2",
+      "category": "School",
+      "moodTag": "Chaotic",
+      "text": "Submitted my 12-page capstone paper 14 seconds before midnight and immediately rewarded myself with cereal in a mixing bowl.",
+      "likes": 218,
+      "likedBy": [
+        "user_luna_demo"
+      ],
+      "reactions": {
+        "💜": 11,
+        "😭": 24,
+        "🔥": 71,
+        "💀": 94,
+        "🫶": 18
+      },
+      "reactionsByUser": {
+        "💜": [],
+        "😭": [],
+        "🔥": [
+          "user_luna_demo"
+        ],
+        "💀": [],
+        "🫶": []
+      },
+      "comments": [
+        {
+          "id": "cm_3",
+          "authorLabel": "Anon #882",
+          "userId": null,
+          "text": "Mixing bowl cereal tastes 40% better after surviving a deadline.",
+          "createdAt": "2026-11-20T10:00:00.000Z"
+        }
+      ],
+      "reportCount": 0,
+      "reports": [],
+      "status": "active",
+      "createdAt": "2026-11-19T23:39:00.000Z"
+    },
+    {
+      "id": "conf_3",
+      "category": "Friendship",
+      "moodTag": "Happy",
+      "text": "My best friend and I have an unspoken agreement where neither of us apologizes for replying 4 days late, we just pick up mid-sentence.",
+      "likes": 304,
+      "likedBy": [
+        "user_luna_demo",
+        "user_kai_demo"
+      ],
+      "reactions": {
+        "💜": 89,
+        "😭": 14,
+        "🔥": 22,
+        "💀": 5,
+        "🫶": 132
+      },
+      "reactionsByUser": {
+        "💜": [],
+        "😭": [],
+        "🔥": [],
+        "💀": [],
+        "🫶": [
+          "user_luna_demo"
+        ]
+      },
+      "comments": [
+        {
+          "id": "cm_4",
+          "authorLabel": "Anon #214",
+          "userId": null,
+          "text": "Low-maintenance high-love friendships are the real flex.",
+          "createdAt": "2026-11-19T14:01:00.000Z"
+        }
+      ],
+      "reportCount": 0,
+      "reports": [],
+      "status": "active",
+      "createdAt": "2026-11-18T15:37:00.000Z"
+    },
+    {
+      "id": "conf_4",
+      "category": "Life",
+      "moodTag": "Overthinking",
+      "text": "I rehearse ordering coffee in my head three times in line and still somehow say \"you too\" when the barista says enjoy your drink.",
+      "likes": 187,
+      "likedBy": [],
+      "reactions": {
+        "💜": 19,
+        "😭": 88,
+        "🔥": 4,
+        "💀": 74,
+        "🫶": 16
+      },
+      "reactionsByUser": {
+        "💜": [],
+        "😭": [],
+        "🔥": [],
+        "💀": [],
+        "🫶": []
+      },
+      "comments": [],
+      "reportCount": 0,
+      "reports": [],
+      "status": "active",
+      "createdAt": "2026-11-18T09:39:00.000Z"
+    },
+    {
+      "id": "conf_5",
+      "category": "Random",
+      "moodTag": "Mentally on Vacation",
+      "text": "Sometimes I put my phone on Do Not Disturb, light a candle, and pretend I live in a coastal studio apartment with zero emails.",
+      "likes": 164,
+      "likedBy": [],
+      "reactions": {
+        "💜": 64,
+        "😭": 9,
+        "🔥": 25,
+        "💀": 6,
+        "🫶": 42
+      },
+      "reactionsByUser": {
+        "💜": [],
+        "😭": [],
+        "🔥": [],
+        "💀": [],
+        "🫶": []
+      },
+      "comments": [],
+      "reportCount": 0,
+      "reports": [],
+      "status": "active",
+      "createdAt": "2026-11-17T17:09:00.000Z"
+    },
+    {
+      "id": "conf_6",
+      "category": "Love",
+      "moodTag": "Romantic",
+      "text": "We locked eyes on the subway twice and I spent the rest of the ride wondering if they liked my jacket.",
+      "likes": 96,
+      "likedBy": [],
+      "reactions": {
+        "💜": 41,
+        "😭": 19,
+        "🔥": 7,
+        "💀": 3,
+        "🫶": 28
+      },
+      "reactionsByUser": {
+        "💜": [],
+        "😭": [],
+        "🔥": [],
+        "💀": [],
+        "🫶": []
+      },
+      "comments": [],
+      "reportCount": 0,
+      "reports": [],
+      "status": "active",
+      "createdAt": "2026-11-16T18:34:00.000Z"
+    }
+  ],
+  "quizResults": [
+    {
+      "id": "qr_1",
+      "userId": "user_luna_demo",
+      "quizId": "main-character",
+      "quizTitle": "What is your main character energy?",
+      "outcomeKey": "indie",
+      "outcomeTitle": "A24 Coming-of-Age Lead",
+      "outcomeSubtitle": "Golden hour shadows and effortless depth.",
+      "shareQuote": "Currently starring in an A24 coming-of-age film with elite lighting.",
+      "isFavorite": true,
+      "createdAt": "2026-11-14T17:29:00.000Z"
+    },
+    {
+      "id": "qr_2",
+      "userId": "user_luna_demo",
+      "quizId": "aesthetic-match",
+      "quizTitle": "What aesthetic represents you?",
+      "outcomeKey": "dreamcore",
+      "outcomeTitle": "Dreamcore Lavender",
+      "outcomeSubtitle": "Poetic haze, twilight skies, soft optimism.",
+      "shareQuote": "My aesthetic: Dreamcore Lavender—twilight skies & soft prisms.",
+      "isFavorite": true,
+      "createdAt": "2026-11-08T20:43:00.000Z"
+    },
+    {
+      "id": "qr_3",
+      "userId": "user_luna_demo",
+      "quizId": "red-flag",
+      "quizTitle": "Which red flag are you?",
+      "outcomeKey": "delulu",
+      "outcomeTitle": "The Hopeless Delulu Optimist",
+      "outcomeSubtitle": "One eye-contact glance = cinematic trilogy.",
+      "shareQuote": "My red flag is turning one polite smile into a three-season arc.",
+      "isFavorite": false,
+      "createdAt": "2026-11-02T15:42:00.000Z"
+    }
+  ],
+  "quizPlays": {
+    "red-flag": 1421,
+    "main-character": 1185,
+    "fictional-character": 890,
+    "relationship-personality": 965,
+    "brain-chaos": 1310,
+    "aesthetic-match": 1042
+  },
+  "discussions": [
+    {
+      "id": "disc_1",
+      "topicTag": "Internet Culture",
+      "title": "Why does going offline for 24 hours feel like a full spa weekend?",
+      "prompt": "Dropped my phone in a drawer all Sunday and came back feeling like a different species.",
+      "authorHandle": "@kai_orbit",
+      "upvotes": 84,
+      "upvotedBy": [
+        "user_luna_demo"
+      ],
+      "replies": [
+        {
+          "id": "dr_1",
+          "authorHandle": "@luna_vibes",
+          "avatarPreset": "aurora",
+          "text": "Grayscale mode after 9 PM changed my whole brain chemistry.",
+          "createdAt": "2026-11-20T11:45:00.000Z"
+        },
+        {
+          "id": "dr_2",
+          "authorHandle": "@milo_fm",
+          "avatarPreset": "violet",
+          "text": "Sunday walks without checking notifications once > everything.",
+          "createdAt": "2026-11-20T12:08:00.000Z"
+        }
+      ],
+      "createdAt": "2026-11-19T10:38:00.000Z"
+    },
+    {
+      "id": "disc_2",
+      "topicTag": "Playlists",
+      "title": "Drop the one song that immediately puts you in Main Character mode",
+      "prompt": "Bonus points if it hits differently on a rainy bus window.",
+      "authorHandle": "@luna_vibes",
+      "upvotes": 112,
+      "upvotedBy": [
+        "user_kai_demo"
+      ],
+      "replies": [
+        {
+          "id": "dr_3",
+          "authorHandle": "@nova_tape",
+          "avatarPreset": "rose",
+          "text": "Anything with warm synth bass and a chorus that opens up at 1:15.",
+          "createdAt": "2026-11-19T19:11:00.000Z"
+        }
+      ],
+      "createdAt": "2026-11-18T16:37:00.000Z"
+    },
+    {
+      "id": "disc_3",
+      "topicTag": "Campus & Work",
+      "title": "Romanticizing boring Tuesday errands actually works—here is proof",
+      "prompt": "Put on headphones, bring an iced drink, treat the grocery aisle like a film set.",
+      "authorHandle": "@solaris_mae",
+      "upvotes": 67,
+      "upvotedBy": [],
+      "replies": [],
+      "createdAt": "2026-11-17T14:25:00.000Z"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "VIBE CHECK",
+  "description": "Your mood. Your people. Your internet. A Gen Z lifestyle and social platform for daily mood check-ins, anonymous confessions, personality quizzes, and monthly Vibe Wrapped.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
