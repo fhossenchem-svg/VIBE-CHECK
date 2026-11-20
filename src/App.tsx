@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { AuthModal } from './components/AuthModal';
 import { ConfessionsSection } from './components/ConfessionsSection';
 import { DiscoverPage } from './components/DiscoverPage';
@@ -71,10 +71,47 @@ function VibeShell() {
   );
 }
 
+class AppErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; message: string }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false, message: '' };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, message: error?.message || 'Unexpected rendering error' };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center p-6 bg-[#FAFAFC] dark:bg-[#0B0A10] text-[#110E1B] dark:text-[#F5F3FF]">
+          <div className="max-w-md w-full rounded-3xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#141120] p-8 text-center space-y-4">
+            <h1 className="font-display text-2xl font-bold">VIBE CHECK hit a snag</h1>
+            <p className="text-sm text-slate-600 dark:text-slate-300">{this.state.message}</p>
+            <button
+              type="button"
+              onClick={() => window.location.reload()}
+              className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-violet-600 to-pink-500 text-white text-sm font-semibold cursor-pointer"
+            >
+              Reload App
+            </button>
+          </div>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
 export default function App() {
   return (
-    <VibeProvider>
-      <VibeShell />
-    </VibeProvider>
+    <AppErrorBoundary>
+      <VibeProvider>
+        <VibeShell />
+      </VibeProvider>
+    </AppErrorBoundary>
   );
 }

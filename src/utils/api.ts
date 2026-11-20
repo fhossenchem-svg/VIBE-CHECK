@@ -1,3 +1,5 @@
+import { handleStaticApiFallback, readFileAsStaticMedia } from './staticFallback';
+
 const TOKEN_KEY = 'vibecheck_token';
 const DEVICE_KEY = 'vibecheck_device_id';
 
@@ -50,6 +52,15 @@ export async function apiFetch<T>(url: string, options: RequestInit = {}): Promi
     headers,
     credentials: 'include',
   });
+
+  const contentType = (res.headers.get('content-type') || '').toLowerCase();
+  if (
+    url.startsWith('/api/') &&
+    !contentType.includes('application/json') &&
+    (res.status === 404 || res.status === 405)
+  ) {
+    return handleStaticApiFallback<T>(url, options);
+  }
 
   const text = await res.text();
   let data: unknown = null;
@@ -144,6 +155,14 @@ export function uploadMediaWithProgress(
     };
 
     xhr.onload = () => {
+      const contentType = (xhr.getResponseHeader('content-type') || '').toLowerCase();
+      if (
+        !contentType.includes('application/json') &&
+        (xhr.status === 404 || xhr.status === 405)
+      ) {
+        readFileAsStaticMedia(file, onProgress).then(resolve).catch(reject);
+        return;
+      }
       let data: { url?: string; mediaType?: 'image' | 'video'; error?: string } | null = null;
       try {
         data = xhr.responseText ? JSON.parse(xhr.responseText) : null;
