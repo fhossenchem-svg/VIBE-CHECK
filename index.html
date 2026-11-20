@@ -19,5 +19,42 @@
   <body class="bg-[#FAFAFC] text-[#110E1B] dark:bg-[#0B0A10] dark:text-[#F5F3FF] antialiased selection:bg-violet-500/25 selection:text-violet-700 dark:selection:text-violet-200">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function () {
+        var bootErrors = [];
+        window.addEventListener('error', function (ev) {
+          if (ev && ev.message) bootErrors.push(ev.message);
+        });
+        window.addEventListener('unhandledrejection', function (ev) {
+          if (ev && ev.reason) bootErrors.push(String(ev.reason));
+        });
+        window.addEventListener('load', function () {
+          setTimeout(function () {
+            if (window.__VIBE_CHECK_MOUNTED__) return;
+            var root = document.getElementById('root');
+            if (!root || root.childElementCount > 0) return;
+            var isSourceServe = !!document.querySelector('script[src="/src/main.tsx"]');
+            root.innerHTML =
+              '<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;font-family:system-ui,-apple-system,sans-serif;background:#FAFAFC;color:#110E1B">' +
+              '<div style="max-width:520px;width:100%;background:#fff;border:1px solid #e2e8f0;border-radius:24px;padding:32px;box-shadow:0 12px 32px rgba(15,23,42,0.06)">' +
+              '<p style="font-size:12px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#7C3AED;margin:0 0 8px">VIBE CHECK</p>' +
+              '<h1 style="font-size:22px;font-weight:800;margin:0 0 12px">' +
+              (isSourceServe ? 'Build required for GitHub Pages' : 'App failed to load') +
+              '</h1>' +
+              '<p style="font-size:14px;line-height:1.6;color:#475569;margin:0 0 16px">' +
+              (isSourceServe
+                ? 'This URL is serving raw TypeScript source (/src/main.tsx) instead of the built dist/ bundle. In GitHub repo Settings -> Pages, set Source to "GitHub Actions" (or deploy the dist/ folder after running npm run build).'
+                : 'A JavaScript module failed to load or execute.') +
+              '</p>' +
+              (bootErrors.length
+                ? '<pre style="font-size:12px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:12px;overflow:auto;color:#be123c">' +
+                  bootErrors.join('\n').replace(/</g, '&lt;') +
+                  '</pre>'
+                : '') +
+              '</div></div>';
+          }, 2000);
+        });
+      })();
+    </script>
   </body>
 </html>

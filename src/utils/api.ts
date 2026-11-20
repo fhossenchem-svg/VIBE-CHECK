@@ -47,18 +47,22 @@ export async function apiFetch<T>(url: string, options: RequestInit = {}): Promi
   }
   headers.set('x-vibe-device', getDeviceId());
 
-  const res = await fetch(url, {
-    ...options,
-    headers,
-    credentials: 'include',
-  });
+  let res: Response;
+  try {
+    res = await fetch(url, {
+      ...options,
+      headers,
+      credentials: 'include',
+    });
+  } catch (err) {
+    if (url.startsWith('/api/') && typeof window !== 'undefined' && window.location.hostname.endsWith('.github.io')) {
+      return handleStaticApiFallback<T>(url, options);
+    }
+    throw err;
+  }
 
   const contentType = (res.headers.get('content-type') || '').toLowerCase();
-  if (
-    url.startsWith('/api/') &&
-    !contentType.includes('application/json') &&
-    (res.status === 404 || res.status === 405)
-  ) {
+  if (url.startsWith('/api/') && !contentType.includes('application/json')) {
     return handleStaticApiFallback<T>(url, options);
   }
 
@@ -156,10 +160,7 @@ export function uploadMediaWithProgress(
 
     xhr.onload = () => {
       const contentType = (xhr.getResponseHeader('content-type') || '').toLowerCase();
-      if (
-        !contentType.includes('application/json') &&
-        (xhr.status === 404 || xhr.status === 405)
-      ) {
+      if (!contentType.includes('application/json')) {
         readFileAsStaticMedia(file, onProgress).then(resolve).catch(reject);
         return;
       }
@@ -178,6 +179,10 @@ export function uploadMediaWithProgress(
     };
 
     xhr.onerror = () => {
+      if (typeof window !== 'undefined' && window.location.hostname.endsWith('.github.io')) {
+        readFileAsStaticMedia(file, onProgress).then(resolve).catch(reject);
+        return;
+      }
       reject(new Error('Network error while uploading media.'));
     };
 
